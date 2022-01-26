@@ -3,7 +3,7 @@ import logo from '../../assets/images/logo-small.svg';
 
 function SreHeader() {
   return (
-    <div className="backdrop-blur-sm relative sticky top-0">
+    <div className="shadow-lg backdrop-blur-sm relative sticky top-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div
           className="flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10"
