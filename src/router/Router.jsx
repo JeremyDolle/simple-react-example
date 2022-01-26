@@ -20,8 +20,4 @@ function Router() {
   );
 }
 
-Router.propTypes = {
-
-};
-
 export default Router;

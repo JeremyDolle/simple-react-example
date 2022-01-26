@@ -13,7 +13,4 @@ function DefaultPageTemplate() {
   );
 }
 
-DefaultPageTemplate.propTypes = {
-};
-
 export default DefaultPageTemplate;

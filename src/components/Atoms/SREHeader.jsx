@@ -26,8 +26,4 @@ function SreHeader() {
   );
 }
 
-SreHeader.propTypes = {
-
-};
-
 export default SreHeader;

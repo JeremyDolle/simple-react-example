@@ -1,5 +1,6 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import useSWR from 'swr';
+import { Link } from 'react-router-dom';
 import { SRETables } from '../components/Atoms';
 import useFormatDataTable from '../hooks/useFormatDataTable';
 
@@ -7,7 +8,6 @@ function Users() {
   const { data, isValidating } = useSWR('/users');
 
   const { normalizedTableData } = useFormatDataTable(data, [
-    'id',
     'address',
     'company',
   ]);
@@ -29,11 +29,24 @@ function Users() {
     };
   }, [normalizedTableData, filter]);
 
-  const MemoizedNestedAction = useCallback(() => (
+  const MemoizedNestedAction = useCallback((row) => (
     <td className="p-3">
-      <a href="#">
-        See Posts
-      </a>
+      <Link to={`/users/${row.id}/posts`} className="text-indigo-600 hover:text-indigo-900">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+      </Link>
     </td>
   ), []);
 
