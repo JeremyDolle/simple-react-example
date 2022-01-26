@@ -12,6 +12,9 @@ function App() {
           <code>src/App.js</code>
           and save to reload.
         </p>
+        <div className="flex-row shadow-xl bg-amber-500">
+          Test Tailwind css
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"
