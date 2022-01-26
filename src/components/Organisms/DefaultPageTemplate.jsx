@@ -6,7 +6,7 @@ function DefaultPageTemplate() {
   return (
     <div>
       <SREHeader />
-      <div>
+      <div className="mb-20">
         <Outlet />
       </div>
     </div>
