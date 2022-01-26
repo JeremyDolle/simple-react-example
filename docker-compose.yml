@@ -1,0 +1,10 @@
+platform:
+  image: thecodingmachine/nodejs:14
+  ports:
+    - "3000:3000" # DEV ONLY (TRAEFIK HOST SHOULD BE BETTER)
+  volumes:
+    - ./:/usr/src/app/:delegated
+  environment:
+    STARTUP_COMMAND_1: yarn
+    STARTUP_COMMAND_2: yarn start
+
