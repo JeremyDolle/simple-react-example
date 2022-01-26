@@ -1,17 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../assets/logo.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+    <div className="text-center">
+      <header className="flex bg-slate-800 min-h-screen flex-col items-center justify-center text-white">
+        <img src={logo} className="h-80 animate-bounce" alt="logo" />
+        <h1>
           Edit
           <code>src/App.js</code>
           and save to reload.
-        </p>
+        </h1>
         <div className="flex-row shadow-xl bg-amber-500">
           Test Tailwind css
         </div>
